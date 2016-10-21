@@ -67,7 +67,7 @@
 					</label>
 				</div>
 				<div class="item-container-footer">
-					Colors setting only applies to Pebble Time and Pebble Time Steel
+					Black&White device can only choose either black or white color. If other color is chosen, text will become white and background will become black by default.
 				</div>
 			</div>
 
@@ -186,6 +186,14 @@
 				}
 			);
 			
+			(function() {
+				// Load any previously saved configuration, if available
+				for (var key in keys) {
+				  var ctrl = document.getElementById(key);
+				  var value = localStorage[key];
+				  ctrl.checked = value ? false : true;
+				}
+			  })();
 		  
 			fillOptions();
 		</script>
