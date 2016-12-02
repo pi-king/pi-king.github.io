@@ -184,15 +184,6 @@
 					document.location = return_to + encodeURIComponent(JSON.stringify(saveOptions()));
 				}
 			);
-			
-			(function() {
-				// Load any previously saved configuration, if available
-				for (var key in keys) {
-				  var ctrl = document.getElementById(key);
-				  var value = localStorage[key];
-				  ctrl.checked = value ? false : true;
-				}
-			  })();
 		  
 			fillOptions();
 		</script>
